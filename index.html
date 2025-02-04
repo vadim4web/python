@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <title>Python у браузері</title>
     <script src="https://cdn.jsdelivr.net/pyodide/v0.24.0/full/pyodide.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/codemirror.min.css">
@@ -11,6 +14,9 @@
     <style>
         * {
             box-sizing: border-box;
+            font-weight: bold;
+            font-family: "Source Code Pro", serif;
+            font-optical-sizing: auto;
         }
         h1 { background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet); background-clip: text; color: transparent; background-size: 0.25ch; background-repeat: repeat; }
         u::after { position: absolute; top: 0; left: 0; height: 0.1rem; width: 100%; content: ""; background: linear-gradient(135deg, red, orange, yellow, green, cyan, blue, violet); }
