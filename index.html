@@ -12,8 +12,10 @@
         * {
             box-sizing: border-box;
         }
+        h1 { background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet); background-clip: text; color: transparent; background-size: 0.25ch; background-repeat: repeat; }
+        u::after { position: absolute; top: 0; left: 0; height: 0.1rem; width: 100%; content: ""; background: linear-gradient(135deg, red, orange, yellow, green, cyan, blue, violet); }
         html { font-size: 1.5vmax; }
-        body { font-family: Arial, sans-serif; padding: 20px; display: flex; flex-direction: column; min-height: 100vh; overflow: hidden; }
+        body { font-family: Arial, sans-serif; padding: 0 20px; display: flex; flex-direction: column; min-height: 100vh; overflow: hidden; }
         #editor { height: 33vh; border: 1px solid #ccc; }
         .CodeMirror { height: 100%; font-size: 1rem; }
         button { font-size: 1rem; margin-top: 10px; }
@@ -25,8 +27,11 @@
     </style>
 </head>
 <body>
-    <h2>Python у браузері</h2>
-    
+    <h1>
+        <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/community/logos/python-logo-only.png" alt="Logo device only" style="width: 1rem; transform: scale(1.5);">
+        <u>Python</u>
+        <small>у браузері</small>
+    </h1>
     <div id="editor" placeholder=`print("Привіт, Python!")`></div>
     <button onclick="runPython()">Запустити</button>
     <button onclick="installPackage()">Встановити пакет</button>
