@@ -57,8 +57,22 @@
         editor.setValue('print("Привіт, Python!")');
 
         async function loadPyodideAndRun() {
-            window.pyodide = await loadPyodide();
-            console.log("✅ Pyodide завантажено!");
+            let outputElement = document.getElementById("output");
+            outputElement.innerText = "⏳ Завантаження Pyodide...";
+
+            try {
+                window.pyodide = await loadPyodide();
+                outputElement.innerText = "✅ Pyodide завантажено!";
+            } catch (error) {
+                console.error("❌ Помилка завантаження Pyodide:", error);
+                outputElement.innerText = "❌ Помилка завантаження Pyodide: " + error;
+                return; // Вихід, якщо Pyodide не завантажився
+            }
+
+            // Якщо все ок — очищаємо
+            setTimeout(() => {
+                outputElement.innerText = "";
+            }, 1000);
         }
         loadPyodideAndRun();
 
